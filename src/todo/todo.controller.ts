@@ -11,8 +11,8 @@ import {
 import { TodoService } from './todo.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
-import { JwtAuthGuard } from 'src/auth/auth.guard';
-import { userEmail } from 'src/common/decorators/user-email.decorators';
+import { JwtAuthGuard } from '../auth/auth.guard';
+import { userEmail } from '../common/decorators/user-email.decorators';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Todo')
@@ -76,3 +76,4 @@ export class TodoController {
     return this.todoService.remove(+id);
   }
 }
+ 
